@@ -1,25 +1,25 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
+import { useState } from "react";
 
 export default function ReloadButton() {
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleReload = () => {
-    setIsLoading(true)
+    setIsLoading(true);
     // شبیه‌سازی بارگذاری
     setTimeout(() => {
-      window.location.reload()
-    }, 1000)
-  }
+      window.location.reload();
+    }, 1000);
+  };
 
   return (
-    <button 
+    <button
       onClick={handleReload}
       disabled={isLoading}
-      className={`text-sm ${isLoading ? 'text-gray-500 cursor-wait' : 'text-blue-600 hover:text-blue-800 underline'}`}
+      className={`text-sm ${isLoading ? "text-gray-500 cursor-wait" : "text-blue-600 hover:text-blue-800 underline"}`}
     >
-      {isLoading ? 'در حال بارگذاری...' : 'تلاش مجدد برای اتصال به API'}
+      {isLoading ? "در حال بارگذاری..." : "تلاش مجدد برای اتصال به API"}
     </button>
-  )
+  );
 }

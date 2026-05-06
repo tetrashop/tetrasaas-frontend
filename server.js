@@ -1,12 +1,12 @@
-const express = require('express');
-const axios = require('axios');
+const express = require("express");
+const axios = require("axios");
 const app = express();
 const PORT = 3000;
 
-app.use(express.static('public'));
+app.use(express.static("public"));
 
 // صفحه اصلی
-app.get('/', (req, res) => {
+app.get("/", (req, res) => {
   res.send(`
     <!DOCTYPE html>
     <html dir="rtl" lang="fa">
@@ -58,12 +58,14 @@ app.get('/', (req, res) => {
 });
 
 // API endpoint برای فراخوانی API اصلی
-app.get('/api/proxy/nlp', async (req, res) => {
+app.get("/api/proxy/nlp", async (req, res) => {
   try {
-    const response = await axios.get('https://tetrashop-projects.vercel.app/api/nlp');
+    const response = await axios.get(
+      "https://tetrashop-projects.vercel.app/api/nlp",
+    );
     res.json(response.data);
   } catch (error) {
-    res.status(500).json({ error: 'خطا در دریافت داده' });
+    res.status(500).json({ error: "خطا در دریافت داده" });
   }
 });
 

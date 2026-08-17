@@ -44,3 +44,4 @@ next-env.d.ts
 # سیستم‌عامل
 Thumbs.db
 *.log
+.env*

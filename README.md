@@ -70,3 +70,8 @@ MIT License
   <sub>ساخته شده با ❤️ توسط تیم TetraShop</sub>
 </div>
 <!-- Trigger deploy: Mon Aug 17 01:49:50 +0330 2026 -->
+
+## 🌐 دیپلوی
+
+- **URL:** [https://tetrasaas-frontend.vercel.app](https://tetrasaas-frontend.vercel.app)
+- **وضعیت:** ✅ فعال
